@@ -92,9 +92,13 @@ scenario_header = "# Scenariusz"
 scenario_text = "Testujemy dwa rodzaje funkcji zapełniające słowniki i listy potęgami kwadratowymi kolejnych iteracji zapełniania tablicy, przy spełnieniu warunku. Program wykonuje każdą z funkcji 10 razy, za każdym razem zwiększając liczbę elementów o 100 począwszy od 100."
 
 results_header = "# Wyniki"
-columns = ["Elementy", "Pętla for", "Komprehensja", "Pętla for na słowniku", "Komprehensja na słowniku"]
-table = " | " + " | ".join(columns) + " | "
-table2 = " | --- | --- | --- | --- | --- |"
+columns = ["Długość tablicy / czas", "Pętla for", "Komprehensja", "Pętla for na słowniku", "Komprehensja na słowniku"]
+table_header = " | " + " | ".join(columns) + " | \n | --- | --- | --- | --- | --- |"
+
+table_content = ""
+
+for i in range(runs):
+    table_content += " | " + str(forTime[runs - 1]) + " | " + str(comprTime[runs - 1]) + " | " + str(forTimeDict[runs - 1]) + " | " + str(comprTimeDict[runs - 1]) + " | "
 
 with open("results.md", "w") as file:
-    file.write(f"{scenario_header}\n{scenario_text}\n{results_header}\n{table}\n{table2}\n")
+    file.write(f"{scenario_header}\n{scenario_text}\n{results_header}\n{table_header}\n{table_content}")
