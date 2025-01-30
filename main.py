@@ -94,11 +94,12 @@ scenario_text = "Testujemy dwa rodzaje funkcji zapełniające słowniki i listy 
 results_header = "# Wyniki"
 columns = ["Długość tablicy / czas", "Pętla for", "Komprehensja", "Pętla for na słowniku", "Komprehensja na słowniku"]
 table_header = " | " + " | ".join(columns) + " | \n | --- | --- | --- | --- | --- |"
+graph = "![Wykres](results.png)"
 
 table_content = ""
 
 for i in range(runs):
-    table_content += f" | {100 * (i + 1)}s |  {forTime[i]:.6f} | {comprTime[i]:.6f} | {forTimeDict[i]:.6f} | {comprTimeDict[i]:.6f} | \n"
+    table_content += f" | {100 * (i + 1)} |  {forTime[i]:.6f}s | {comprTime[i]:.6f}s | {forTimeDict[i]:.6f}s | {comprTimeDict[i]:.6f}s | \n"
 
 with open("results.md", "w") as file:
-    file.write(f"{scenario_header}\n{scenario_text}\n{results_header}\n{table_header}\n{table_content}")
+    file.write(f"{scenario_header}\n{scenario_text}\n{results_header}\n{table_header}\n{table_content}\n{graph}")
