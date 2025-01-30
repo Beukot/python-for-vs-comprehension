@@ -88,10 +88,10 @@ plt.savefig('results.png', dpi=300, bbox_inches='tight')
 
 plt.show()
 
-scenario_header = "#Scenariusz"
+scenario_header = "# Scenariusz"
 scenario_text = "Testujemy dwa rodzaje funkcji zapełniające słowniki i listy potęgami kwadratowymi kolejnych iteracji zapełniania tablicy, przy spełnieniu warunku. Program wykonuje każdą z funkcji 10 razy, za każdym razem zwiększając liczbę elementów o 100 począwszy od 100."
 
-results_header = "#Wyniki"
+results_header = "# Wyniki"
 columns = ["Elementy", "Pętla for", "Komprehensja", "Pętla for na słowniku", "Komprehensja na słowniku"]
 table = "|" + "|".join(columns) + "|"
 
