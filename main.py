@@ -98,7 +98,7 @@ table_header = " | " + " | ".join(columns) + " | \n | --- | --- | --- | --- | --
 table_content = ""
 
 for i in range(runs):
-    table_content += " | " + str(100 * (i + 1)) + " | " + str(forTime[i]) + " | " + str(comprTime[i]) + " | " + str(forTimeDict[i]) + " | " + str(comprTimeDict[i]) + " | \n"
+    table_content += f" | {100 * (i + 1)}s |  {forTime[i]:.6f} | {comprTime[i]:.6f} | {forTimeDict[i]:.6f} | {comprTimeDict[i]:.6f} | \n"
 
 with open("results.md", "w") as file:
     file.write(f"{scenario_header}\n{scenario_text}\n{results_header}\n{table_header}\n{table_content}")
