@@ -93,7 +93,7 @@ scenario_text = "Testujemy dwa rodzaje funkcji zapełniające słowniki i listy 
 
 results_header = "# Wyniki"
 columns = ["Elementy", "Pętla for", "Komprehensja", "Pętla for na słowniku", "Komprehensja na słowniku"]
-table = "|" + "|".join(columns) + "|"
+table = " | " + " | ".join(columns) + " | "
 
 with open("results.md", "w") as file:
     file.write(f"{scenario_header}\n{scenario_text}\n{results_header}\n{table}")
